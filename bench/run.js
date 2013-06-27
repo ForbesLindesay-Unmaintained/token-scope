@@ -5,7 +5,7 @@ var Table = require('cli-table')
 var api = require('./api')
 var jquery = fs.readFileSync(__dirname + '/jquery.js', 'utf8')
 
-var table = new Table({head: ['name', 'time', 'output'], colWidths: [15, 8, 100]})
+var table = new Table({head: ['name', 'time', 'output'], colWidths: [15, 8, 60]})
 Object.keys(api)
   .forEach(function (name) {
     var start = new Date()

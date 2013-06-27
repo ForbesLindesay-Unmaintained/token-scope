@@ -14,9 +14,9 @@ A very fast approximation of lexical-scope.  It takes the source code and return
 
 ```js
 var detect = require('token-scope')
-var inspectForRequire = detect(src, ['require'])
+var inspectForRequire = detect(src)
 
-if (inspectForRequire) {
+if (inspectForRequire.indexOf('require') != -1) {
   // do more time consuming checks to search for require properly
 }
 ```
@@ -27,11 +27,9 @@ Tests:
 var detect = require('token-scope')
 
 describe('detect(src, identifiers)', function () {
-  it('returns `true` if the identifiers occur in src', function () {
-    assert(detect('var x = require("foo")', ['require']) === true)
-  })
-  it('returns `false` if the identifiers do not occur in src', function () {
-    assert(detect('var x = foo("require")', ['require']) === false)
+  it('returns an array of identifiers that might represent global variable references', function () {
+    assert(detect('var x = require("foo")').indexOf('require') != -1)
+    assert(detect('var x = foo("require")').indexOf('require') == -1)
   })
 })
 ```
@@ -48,10 +46,10 @@ $ node bench/run.js
 This runs 3 different scoping mechanisms on a minified copy of jQuery.  They then also check that the result does not include any of the node.js globals. On my machine, this results in the output (note how `token-scope` results in a lot more potential globals, but still turns out to be good enough to rule out node.js globals):
 
  name          | time   | output
----------------|--------|---------------------------------------------------------------------------------------------------
- token-scope   | 747ms  | a,b,cy,f,cv,ck,c,d,e,cl,cm,cu,cq,ct,cr,cs,setTimeout,cj,ci,cc,g,h,i,j,k,l,m,n,o,p,cb,ca,bE,b_,b$,…
- ugly-scope    | 1457ms | setTimeout,parseFloat,Object,Array,String,arguments,isNaN,isFinite,Error,Function,DOMParser,Activ…
- lexical-scope | 2252ms | setTimeout,parseFloat,Object,Array,String,arguments,isNaN,isFinite,Error,Function,DOMParser,Activ…
+---------------|--------|---------------
+ token-scope   | 747ms  | a,b,cy,f,cv,ck,…
+ ugly-scope    | 1457ms | setTimeout,par…
+ lexical-scope | 2252ms | setTimeout,par…
 
 ## License
 

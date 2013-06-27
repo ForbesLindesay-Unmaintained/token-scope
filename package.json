@@ -14,7 +14,7 @@
     "cli-table": "~0.2.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec && node bench/run.js"
   },
   "repository": {
     "type": "git",
