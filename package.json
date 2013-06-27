@@ -1,6 +1,6 @@
 {
   "name": "token-scope",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A very fast approximation of lexical-scope",
   "keywords": [],
   "dependencies": {

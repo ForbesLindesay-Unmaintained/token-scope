@@ -43,7 +43,7 @@ $ npm install
 $ node bench/run.js
 ```
 
-This runs 3 different scoping mechanisms on a minified copy of jQuery.  They then also check that the result does not include any of the node.js globals. On my machine, this results in the output (note how `token-scope` results in a lot more potential globals, but still turns out to be good enough to rule out node.js globals):
+This runs 3 different scoping mechanisms on a minified copy of jQuery and report the total time for 10 iterations.  They then also check that the result does not include any of the node.js globals. On my machine, this results in the output (note how `token-scope` results in a lot more potential globals, but still turns out to be good enough to rule out node.js globals):
 
  name          | time   | output
 ---------------|--------|---------------
