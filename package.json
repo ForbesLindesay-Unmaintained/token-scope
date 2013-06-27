@@ -1,0 +1,25 @@
+{
+  "name": "token-scope",
+  "version": "0.0.0",
+  "description": "A very fast approximation of lexical-scope",
+  "keywords": [],
+  "dependencies": {
+    "esprima": "git://github.com/ariya/esprima"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "lexical-scope": "git://github.com/substack/lexical-scope",
+    "uglify-js": "~2.3.6",
+    "ms": "~0.6.1",
+    "cli-table": "~0.2.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/token-scope.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT"
+}
