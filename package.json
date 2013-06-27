@@ -4,7 +4,7 @@
   "description": "A very fast approximation of lexical-scope",
   "keywords": [],
   "dependencies": {
-    "esprima": "git://github.com/ariya/esprima"
+    "esprima": "https://github.com/ariya/esprima/archive/1bfe632f5b207eb57c22b4ee2c10906ba755a83d.tar.gz"
   },
   "devDependencies": {
     "mocha": "*",
