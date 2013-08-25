@@ -8,10 +8,10 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "lexical-scope": "git://github.com/substack/lexical-scope",
-    "uglify-js": "~2.3.6",
-    "ms": "~0.6.1",
-    "cli-table": "~0.2.0"
+    "lexical-scope": "*",
+    "uglify-js": "*",
+    "ms": "*",
+    "cli-table": "*"
   },
   "scripts": {
     "test": "mocha -R spec && node bench/run.js"
