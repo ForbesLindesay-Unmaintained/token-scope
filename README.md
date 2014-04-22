@@ -2,9 +2,9 @@
 
 A very fast approximation of lexical-scope.  It takes the source code and returns a list of all identifiers that have the potential to be references to global variables.  This just parses the token stream, so it is much less thorough than `lexical-scope` or using `uglify-js` to do the same thing.  It has the advantage of being vastly faster though.  It is good enough to detect that jQuery does not contain `require` or any of the node.js globals.
 
-[![Build Status](https://travis-ci.org/ForbesLindesay/token-scope.png?branch=master)](https://travis-ci.org/ForbesLindesay/token-scope)
-[![Dependency Status](https://gemnasium.com/ForbesLindesay/token-scope.png)](https://gemnasium.com/ForbesLindesay/token-scope)
-[![NPM version](https://badge.fury.io/js/token-scope.png)](http://badge.fury.io/js/token-scope)
+[![Build Status](https://img.shields.io/travis/ForbesLindesay/token-scope/master.svg)](https://travis-ci.org/ForbesLindesay/token-scope)
+[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/token-scope.svg)](https://gemnasium.com/ForbesLindesay/token-scope)
+[![NPM version](https://img.shields.io/npm/v/token-scope.svg)](http://badge.fury.io/js/token-scope)
 
 ## Installation
 
