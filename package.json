@@ -9,7 +9,7 @@
   "devDependencies": {
     "mocha": "*",
     "lexical-scope": "*",
-    "uglify-js": "*",
+    "uglify-js": ">=2.8.4",
     "ms": "*",
     "cli-table": "*"
   },
