@@ -7,7 +7,7 @@
     "esprima": "https://github.com/ariya/esprima/archive/1bfe632f5b207eb57c22b4ee2c10906ba755a83d.tar.gz"
   },
   "devDependencies": {
-    "mocha": "*",
+    "mocha": ">=3.4.1",
     "lexical-scope": "*",
     "uglify-js": "*",
     "ms": "*",
