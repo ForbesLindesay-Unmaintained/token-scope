@@ -10,7 +10,7 @@
     "mocha": "*",
     "lexical-scope": "*",
     "uglify-js": "*",
-    "ms": "*",
+    "ms": ">=2.0.0",
     "cli-table": "*"
   },
   "scripts": {
